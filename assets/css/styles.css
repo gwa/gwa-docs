@@ -205,6 +205,10 @@ tr:nth-child(odd) td {
   margin-top: 30px;
 }
 
+.ui-body img {
+  max-width: 100%;
+}
+
 .ui-body .ui-header {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
