@@ -1,0 +1,10 @@
+{% for key, collection in collections %}
+<div class="ui-section">
+  <h3>{{ key }}</h3>
+  <ul>
+    {% for item in collection %}
+    <li><a href="{{ rootPath }}{{ item.path }}">{{ item.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endfor %}

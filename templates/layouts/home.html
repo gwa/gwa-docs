@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+
+{% block body %}
+
+  <div class="ui-header">&nbsp;</div>
+
+  {% if title %}
+    <h1>{{ title }}</h1>
+  {% endif %}
+
+  <div class="ui-page-content">
+  {{ contents|raw }}
+  </div>
+
+{% endblock %}

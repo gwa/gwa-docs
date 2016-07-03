@@ -1,0 +1,11 @@
+{
+  "project": "GWA Docs",
+  "src": "test/src",
+  "dest": "test/build",
+  "collections": {
+    "Usage": {
+        "pattern": "usage/**/*.html",
+        "sortBy": "priority"
+      }
+  }
+}

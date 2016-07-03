@@ -1,0 +1,26 @@
+{% extends '_base.html' %}
+
+{% block body %}
+  {% if collection %}
+  <div class="ui-header">{{ collection }}</div>
+  {% endif %}
+
+  {% if title %}
+    <h1>
+      {% if previous %}
+      <a class="ui-page-controls opt-previous" href="{{ rootPath }}{{ previous.path }}" title="{{ previous.title }}"></a>
+      {% endif %}
+
+      {% if next %}
+      <a class="ui-page-controls opt-next" href="{{ rootPath }}{{ next.path }}" title="{{ next.title }}"></a>
+      {% endif %}
+
+      {{ title }}
+    </h1>
+  {% endif %}
+
+  <div class="ui-page-content">
+  {{ contents|raw }}
+  </div>
+
+{% endblock %}
