@@ -226,6 +226,14 @@ tr:nth-child(odd) td {
   box-shadow: inset 0 -20px 0 #b4e7f8;
 }
 
+.ui-page-content a.has-image {
+  box-shadow: none;
+}
+
+.ui-page-content a.has-image:hover {
+  box-shadow: none;
+}
+
 .ui-page-content strong {
   font-weight: 600;
 }
