@@ -170,10 +170,6 @@ tr:nth-child(odd) td {
 }
 
 .ui-sidebar-footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
 }
 
 .ui-sidebar-footer p {
@@ -207,6 +203,8 @@ tr:nth-child(odd) td {
 
 .ui-body img {
   max-width: 100%;
+  display: block;
+  margin: 2em 0;
 }
 
 .ui-body .ui-header {
