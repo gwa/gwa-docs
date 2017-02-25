@@ -4,8 +4,12 @@
   "dest": "test/build",
   "collections": {
     "Usage": {
-        "pattern": "usage/**/*.html",
-        "sortBy": "priority"
-      }
+      "pattern": "usage/**/*.html",
+      "sortBy": "priority"
+    },
+    "Second Section": {
+      "pattern": "second/**/*.html",
+      "sortBy": "priority"
+    }
   }
 }

@@ -1,6 +1,6 @@
 {% for key, collection in collections %}
 
-{% set hasactive = true %}
+{% set hasactive = false %}
 {% for item in collection %}
   {% if item.path == path %}
     {% set hasactive = true %}
