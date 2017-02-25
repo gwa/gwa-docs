@@ -1,6 +1,6 @@
 {
   "name": "gwa-docs",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "GWA Static Documentation Generator",
   "main": "index.js",
   "repository" : {
