@@ -148,10 +148,11 @@ tr:nth-child(odd) td {
 
 .ui-sidebar h3 {
   position: relative;
-  margin: 0 0 10px 0;
+  margin: 0 0 5px 0;
   padding-left: 15px;
   font-size: 15px;
   cursor: pointer;
+  font-family: 'Assistant', sans-serif;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
