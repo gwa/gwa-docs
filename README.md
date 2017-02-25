@@ -13,5 +13,5 @@ npm install
 Build the example documentation by running:
 
 ```bash
-node ./index.js text/config.json
+node ./index.js test/config.json
 ```

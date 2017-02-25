@@ -1,5 +1,23 @@
 (function () {
 
+  function initSidebar() {
+    var sections = document.querySelectorAll('.ui-sidebar .ui-section');
+    sections.forEach(initSidebarSection);
+  }
+
+  function initSidebarSection(section) {
+    var hl = section.querySelector('h3');
+    if (!section.classList.contains('is-active')) {
+      section.classList.add('hidden');
+    }
+    hl.addEventListener('click', toggleSection);
+  }
+
+  function toggleSection(ev) {
+    var hl = ev.target;
+    hl.parentElement.classList.toggle('hidden');
+  }
+
   function removeLinkStylesOnLinksContainImages() {
     var i, l, item,
       anchors = document.getElementsByTagName('a');
@@ -12,6 +30,7 @@
     }
   }
 
+  initSidebar();
   removeLinkStylesOnLinksContainImages();
 
 })();

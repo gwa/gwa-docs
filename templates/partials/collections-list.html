@@ -1,10 +1,19 @@
 {% for key, collection in collections %}
-<div class="ui-section">
+
+{% set hasactive = true %}
+{% for item in collection %}
+  {% if item.path == path %}
+    {% set hasactive = true %}
+  {% endif %}
+{% endfor %}
+
+<div class="ui-section{% if hasactive %} is-active{% endif %}">
   <h3>{{ key }}</h3>
   <ul>
     {% for item in collection %}
-    <li><a href="{{ rootPath }}{{ item.path }}">{{ item.title }}</a></li>
+    <li class="{% if item.path == path %}is-active{% endif %}"><a href="{{ rootPath }}{{ item.path }}">{{ item.title }}</a></li>
     {% endfor %}
   </ul>
 </div>
+
 {% endfor %}

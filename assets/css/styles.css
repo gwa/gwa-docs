@@ -58,7 +58,7 @@ body {
   font-family: 'Assistant', sans-serif;
   font-weight: 400;
   margin: 0;
-  padding: 0 0 0 250px;
+  padding: 0 0 0 280px;
 }
 
 h1, h2, h3, h4 {
@@ -116,7 +116,7 @@ tr:nth-child(odd) td {
   position: fixed;
   top: 0;
   left: 0;
-  width: 250px;
+  width: 280px;
   height: 100vh;
   background-color: #f4f4f4;
   border-right: 1px solid #ddd;
@@ -126,13 +126,13 @@ tr:nth-child(odd) td {
 
 .ui-sidebar h1 {
   border-bottom: 1px solid #ddd;
-  margin: 0 0 48px 0;
+  margin: 0 0 26px 0;
 }
 
 .ui-sidebar h1 a,
 .ui-sidebar h1 a:visited {
   display: block;
-  padding: 10px;
+  padding: 15px 10px 15px 25px;
   font-size: 15px;
   background: #f4f4f4;
   color: inherit;
@@ -147,14 +147,45 @@ tr:nth-child(odd) td {
 }
 
 .ui-sidebar h3 {
+  position: relative;
   margin: 0 0 10px 0;
+  padding-left: 15px;
   font-size: 15px;
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.ui-sidebar h3:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border: 1px solid #999;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  transform: rotate(135deg);
+}
+
+.ui-sidebar .hidden h3:before {
+  transform: rotate(45deg);
+  top: 6px;
+  left: -1px;
 }
 
 .ui-sidebar ul {
   list-style: none;
-  padding: 0;
+  padding: 0 0 0 15px;
   margin: 0;
+}
+
+.ui-sidebar .hidden ul {
+  display: none;
 }
 
 .ui-sidebar li {
@@ -165,15 +196,14 @@ tr:nth-child(odd) td {
   color: #2dbceb;
 }
 
+.ui-sidebar li.is-active a,
 .ui-sidebar a:hover {
   color: #14a2d2;
 }
 
-.ui-sidebar-footer {
-}
 
 .ui-sidebar-footer p {
-  padding: 10px;
+  padding: 10px 10px 10px 25px;
   color: #ccc;
 }
 
@@ -183,7 +213,7 @@ tr:nth-child(odd) td {
 
 .ui-body {
   position: relative;
-  padding: 0 200px 50px;
+  padding: 0 100px 50px;
   line-height: 1.5em;
 }
 
@@ -211,9 +241,9 @@ tr:nth-child(odd) td {
 .ui-body .ui-header {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  padding: 10px 0 11px;
+  padding: 15px 0 16px;
   font-size: 15px;
-  margin-bottom: 41px;
+  margin-bottom: 31px;
 }
 
 .ui-page-content a {
@@ -267,13 +297,30 @@ tr:nth-child(odd) td {
 }
 
 .ui-page-controls.opt-previous {
-  left: -115px;
+  left: -70px;
 }
 
 .ui-page-controls.opt-next {
-  right: -115px;
+  right: -70px;
 }
 
 .ui-page-controls.opt-next:before {
   content: "\e903";
+}
+
+
+
+@media (min-width: 1200px) {
+  .ui-body {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+
+  .ui-page-controls.opt-previous {
+    left: -115px;
+  }
+
+  .ui-page-controls.opt-next {
+    right: -115px;
+  }
 }
