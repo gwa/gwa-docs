@@ -70,6 +70,21 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: 0;
+  background-color: #2dbceb;
+  padding: 10px 15px;
+  font-family: 'Assistant', sans-serif;
+  font-weight: 600;
+  font-size: inherit;
+  color: #fff;
+  transition: background-color .2s;
+}
+
+button:hover {
+  background-color: #14a2d2;
+}
+
 pre {
   font-size: 13px;
 }
