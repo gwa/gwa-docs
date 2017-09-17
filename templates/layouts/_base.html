@@ -10,6 +10,9 @@
 
 <div class="ui-sidebar">
   <h1><a href="{{ rootPath }}">{{ project }}</a></h1>
+  <div class="ui-sidebar-search">
+    <input type="text" id="search" placeholder="search">
+  </div>
   {% include "../partials/collections-list.html" %}
   <div class="ui-sidebar-footer">
     <p>Made with <i class="icon-heart"></i> by <a href="http://www.greatwhiteark.com">GWA</a></p>
@@ -22,7 +25,11 @@
 {% endblock %}
 </div>
 
+<div class="ui-search-results"></div>
+
+<script>var rootPath = '{{ rootPath }}';</script>
 <script src="{{ rootPath }}assets/js/prism.js"></script>
+<script src="{{ rootPath }}assets/js/lunr.js"></script>
 <script src="{{ rootPath }}assets/js/functions.js"></script>
 
 </body>

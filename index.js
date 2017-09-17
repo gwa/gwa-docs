@@ -7,7 +7,8 @@ var Metalsmith = require('metalsmith'),
   assets       = require('metalsmith-assets'),
   permalinks   = require('metalsmith-permalinks'),
   define       = require('metalsmith-define'),
-  path         = require('path');
+  path         = require('path'),
+  lunr_index   = require('./plugin/lunr_index.js');
 
 var configarg = process.argv[2];
 
@@ -34,6 +35,7 @@ var ms = Metalsmith(__dirname)
   .use(define({
     project: project
   }))
+  .use(lunr_index())
   .use(markdown())
   .use(permalinks())
   .use(rootpath())
