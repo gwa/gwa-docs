@@ -141,7 +141,7 @@ tr:nth-child(odd) td {
 
 .ui-sidebar h1 {
   border-bottom: 1px solid #ddd;
-  margin: 0 0 26px 0;
+  margin: 0;
 }
 
 .ui-sidebar h1 a,
@@ -155,6 +155,26 @@ tr:nth-child(odd) td {
 }
 .ui-sidebar h1 a:hover {
   background: #fff100;
+}
+
+.ui-sidebar-search {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.ui-sidebar-search input {
+  width: 100%;
+  font-family: 'Assistant', sans-serif;
+  font-size: 15px;
+  border: 0;
+  background: transparent;
+  padding: 15px 10px 15px 25px;
+  transition: background-color .2s;
+}
+
+.ui-sidebar-search input:focus {
+  outline: none;
+  background: #fff;
 }
 
 .ui-sidebar .ui-section {
@@ -217,7 +237,6 @@ tr:nth-child(odd) td {
   color: #14a2d2;
 }
 
-
 .ui-sidebar-footer p {
   padding: 10px 10px 10px 25px;
   color: #ccc;
@@ -227,13 +246,15 @@ tr:nth-child(odd) td {
   color: #ccc;
 }
 
-.ui-body {
+.ui-body,
+.ui-search-results {
   position: relative;
   padding: 0 100px 50px;
   line-height: 1.5em;
 }
 
-.ui-body h1 {
+.ui-body h1,
+.ui-search-results h1 {
   position: relative;
   margin-top: 0;
   margin-bottom: 50px;
@@ -254,12 +275,33 @@ tr:nth-child(odd) td {
   border: 1px solid #ddd;
 }
 
-.ui-body .ui-header {
+.ui-body .ui-header,
+.ui-search-results .ui-header {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   padding: 15px 0 16px;
   font-size: 15px;
   margin-bottom: 31px;
+}
+
+.ui-header a,
+.ui-search-results a {
+  color: #2dbceb;
+}
+
+.ui-header a:hover,
+.ui-search-results a:hover {
+  color: #14a2d2;
+}
+
+.ui-search-results ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ui-search-results li {
+  padding: 4px 0;
 }
 
 .ui-page-content a {
@@ -324,10 +366,14 @@ tr:nth-child(odd) td {
   content: "\e903";
 }
 
+.is-hidden {
+  display: none;
+}
 
 
 @media (min-width: 1200px) {
-  .ui-body {
+  .ui-body,
+  .ui-search-results {
     padding-left: 200px;
     padding-right: 200px;
   }
