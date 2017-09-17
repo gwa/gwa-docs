@@ -13,6 +13,10 @@ var lunr_index = function (options) {
         continue;
       }
 
+      if (key.substring(key.length - 3) !== '.md') {
+        continue;
+      }
+
       item = files[key];
 
       data.push(
